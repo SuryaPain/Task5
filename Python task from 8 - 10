@@ -1,0 +1,39 @@
+rated_sorted_list = [19, 24, 45, 49, 57] #8
+def find_minimum_rated_sorted(arr):
+    if not arr:
+        return None
+    else:
+        return arr[0]
+min_element = find_minimum_rated_sorted(rated_sorted_list)
+print("Minimum element in the rated and sorted list:", min_element)
+
+a = [10, 20, 30, 9] #9
+target = 59
+def find_triplet_with_sum(a, target): 
+    n = len(a)
+    for i in range(n - 2):
+        for j in range(i + 1, n - 1):
+            for k in range(j + 1, n):
+                if a[i] + a[j] + a[k] == target:
+                    return a[i], a[j], a[k]
+triplet = find_triplet_with_sum(a, target)
+if triplet:
+    print("Triplet with sum", target, ":", triplet)
+else:
+    print("No triplet found with sum", target)
+
+r = [4, 2, -3, 1, 6] #10
+def has_zero_sum_sublist(r):
+    seen_sums = set()
+    running_sum = 0
+    
+    for num in r:
+        running_sum += num
+        if running_sum == 0 or running_sum in seen_sums:
+            return True
+        seen_sums.add(running_sum)
+    return False
+if has_zero_sum_sublist(r):
+    print("Yes, there is a sub-list with sum equal to zero.")
+else:
+    print("No, there is no sub-list with sum equal to zero.")
