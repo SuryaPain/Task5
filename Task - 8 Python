@@ -1,0 +1,16 @@
+data = [10, 501, 22, 37, 100, 999, 87, 351] #1
+result = filter(lambda x: x > 4, data)
+print(list(result))
+
+List = ["Surya", "hello", 59, "Python"] #2
+
+result = map(lambda x: isinstance(x, (int, str)), List)
+
+print(list(result))
+
+fibonacci = lambda n: (x[0] for x in ((a, a + (lambda a, b: (b, a + b))(a, 0)[0]) for a in range(n))) #3
+
+fib_series = list(fibonacci(50))
+
+print("Fibonacci series (up to 50 elements):", fib_series)
+
